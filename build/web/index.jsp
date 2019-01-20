@@ -1,8 +1,9 @@
+<%@page import="java.sql.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <title>Titulo de la web| Menos de 55 caracteres</title>
+        <title>Inicio</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -13,6 +14,23 @@
               integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     </head>
     <body>
+        <%
+            //CONECTANOD A LA BASE DE DATOS:
+            Connection con;
+            String url = "jdbc:postgresql://localhost:5432/Registro";
+            String Driver = "org.postgresql.Driver";
+            String user = "postgres";
+            String clave = "12345";
+            Class.forName(Driver);
+            con = DriverManager.getConnection(url, user, clave);
+            PreparedStatement ps;
+            //Emnpezamos Listando los Datos de la Tabla Usuario
+            Statement smt;
+            ResultSet rs;
+            smt = con.createStatement();
+            rs = smt.executeQuery("select * from profesor");
+            //Creamo la Tabla:     
+%>  
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
@@ -63,7 +81,7 @@
                                             <input type="password" name="contrasena" class="form-control" id="contrasena" required="true" />
                                         </div>
                                         <button type="submit" class="btn btn-primary">
-                                            Iniciar Sesión
+                                            Entrar
                                         </button>
                                         <a href="Empesar/Registro.jsp" class="btn btn-success">
                                             <span class="glyphicon glyphicon-list"></span> Registrarse 
@@ -73,7 +91,7 @@
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <img alt="Bootstrap Image Preview" src="imagenes/Geston.png" height="540" width="900"  /> 
+                            <img alt="Bootstrap Image Preview" src="imagenes/Geston.png" height="440" width="800"  /> 
                         </div>                 
                         <div class="col-md-4">      
                         </div>               

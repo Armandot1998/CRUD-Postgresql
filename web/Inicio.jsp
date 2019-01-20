@@ -1,12 +1,14 @@
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <title>Titulo de la web| Menos de 55 caracteres</title>
+        <title>Inicio</title>
         <meta charset="utf-8" />
-        <meta name="description" content="Debe contener las palabras clave, tratar de atraer clicks y de longitud entre 150 y 160 caracteres">
-        <link rel="stylesheet" href="././tyles/style.css" />
-        <link rel="shortcut icon" href="/favicon.ico" />
-        <!-- Latest compiled and minified CSS -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
               integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -21,8 +23,8 @@
                                 <div class="col-md-4">
                                 </div>
                                 <div class="col-md-4">
-                                    <br><img alt="Bootstrap Image Preview"  src="imagenes/Yavirac3.png" 
-                                             class="" height="100" width="160" />
+                                    <br><img alt="Bootstrap Image Preview"  src="imagenes/Yavirac3.jpg" 
+                                             class="" height="80" width="120" />
                                 </div>
                                 <div class="col-md-4">
                                 </div>
@@ -34,36 +36,10 @@
                         </div>
                     </div>
                 </div>
-            </div><br>
-        </div>
-        <header>
-            <p>Mi sitio web creado en html5</p>
+            </div>
+        </div><br>
+        <header align="right">         
         </header>
-
-        
-        
-        
-        
-        
-        <nav>
-            <h3 class="text-center">
-                <a class="active" href="/index.htm">Home</a>
-                <a href="/uno.htm">Uno</a>
-                <a href="/dos.htm">Dos</a>
-                <a href="/tres.htm">Tres</a></h3>
-        </nav>
-        <section>
-            <article>
-                <h2>Titilo de contenido</h2>
-                <p> Contenido </p>
-            </article>
-        </section>
-        <aside>
-            <h3>Titulo de contenido</h3>
-            <p>contenido</p>
-        </aside>
-        <footer>
-            Creado por mi el 2011
-        </footer>
+       
     </body>
 </html>

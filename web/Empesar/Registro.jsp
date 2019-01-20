@@ -3,12 +3,15 @@
 <!DOCTYPE html>
 <html lang="">
     <head>
-        <title>Registro Académico</title>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <link rel="stylesheet" type="text/css" href="../styles/bootstrap4/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="../styles/main_styles.css">
-
+        <title>Inicio</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+              integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     </head>
     <body>
         <%
@@ -26,97 +29,75 @@
             smt = con.createStatement();
 
         %>    
-
-        <div class="super_container">
-            <header class="header d-flex flex-row justify-content-end align-items-center trans_300">
-                <div class="logo mr-auto">
-                    <a href="#">Puntuación</a>
-                </div>
-                <!-- Navigation -->
-                <nav class="main_nav justify-self-end text-right">
-                    <ul>
-                        <li><a href="../index.jsp">Inicio</a></li>
-                        <li><a href="Login.jsp" >Iniciar Sesión</a></li>
-                    </ul>
-                </nav>
-
-            </header>
-
-            <div class="home">
-                <div class="home_background_container prlx_parent">
-                    <div class="home_background prlx" style="background-image:url(../imagenes/slider_background.jpg)"></div>
-                </div>
-                <div class="container">
-                    <div class="container"><br><br>
-                        <div class="container-fluid">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-4">
                             <div class="row">
-                                <div class="col-md-12">
-                                    <div class="container-fluid">
-                                        <br>
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                            </div>
-                                            <div class="col-md-4">
-                                                <h3 class="text-right text-muted">
-                                                    Resgistro de Datos
-                                                </h3>
-                                            </div>
-                                            <div class="col-md-4">
-                                            </div>
-                                        </div>
-                                        <br>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                        </div>
-                                        <div class="col-md-4">
-                                            <form >
-                                                <div class="form-group">   
-                                                    <b>  Nombres Completos:</b>
-                                                    <input type="text" name="txtNom" class="form-control" required="true" />
-                                                </div>
-                                                <div class="form-group">
-                                                    <b>Apellidos Completos:</b>
-                                                    <input type="text" name="txtApe" class="form-control" required="true" />
-                                                </div>
-                                                <div class="form-group">
-                                                    <b>Cedula de Identidad:</b>
-                                                    <input type="text" name="txtCed" class="form-control" required="true" />
-                                                </div>
-                                                <div class="form-group">
-                                                    <b>Correo Electrónico:</b>
-                                                    <input type="text" name="txtCor" class="form-control" required="true" />
-                                                </div>
-                                                <div class="form-group">
-                                                    <b>  Nombre de Usuario:</b>
-                                                    <input type="text" name="txtUse" class="form-control" required="true"/>
-                                                </div>
-                                                <div class="form-group">
-                                                    <b>Contraseña:</b>
-                                                    <input type="text" name="txtCla" class="form-control" required="true"/>
-                                                </div>
-                                                <button type="submit" class="btn btn-primary">Guardar</button>
-                                                <button type="submit" class="btn btn-default">Cancelar</button>
-                                            </form>
-                                            <br>
-                                        </div>
-                                        <div class="col-md-4">
-
-                                        </div>
-                                    </div>
+                                <div class="col-md-4">
+                                </div>
+                                <div class="col-md-4">
+                                    <br><img alt="Bootstrap Image Preview"  src="../imagenes/Yavirac3.jpg" 
+                                             class="" height="80" width="120" />
+                                </div>
+                                <div class="col-md-4">
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="hero_side_text_container">
-                    <div class="double_arrow_container d-flex flex-column">
-                        <div class="double_arrow nav_links" data-scroll-to=".icon_boxes">
+                        <div class="col-md-4">
+                        </div>
+                        <div class="col-md-4">
                         </div>
                     </div>
-                    <div class="hero_side_text">
-                        <h2>&emsp;&emsp;Instituto Tecnológico Superior</h2>
-                        <h2>&emsp;&emsp;YAVIRAC</h2>
+                </div>
+            </div>
+        </div><br>
+        <header align="right">         
+        </header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-3">
+                        </div>
+                        <div class="col-md-6">
+                            <form >
+                                <div class="form-group">   
+                                    <h3 class="text-right text-muted">
+                                        Resgistro de Datos
+                                    </h3><br>
+                                    <b>  Nombres Completos:</b>
+                                    <input type="text" name="txtNom" class="form-control" required="true" />
+                                </div>
+                                <div class="form-group">
+                                    <b>Apellidos Completos:</b>
+                                    <input type="text" name="txtApe" class="form-control" required="true" />
+                                </div>
+                                <div class="form-group">
+                                    <b>Cedula de Identidad:</b>
+                                    <input type="text" name="txtCed" class="form-control" required="true" />
+                                </div>
+                                <div class="form-group">
+                                    <b>Correo Electrónico:</b>
+                                    <input type="text" name="txtCor" class="form-control" required="true" />
+                                </div>
+                                <div class="form-group">
+                                    <b>  Nombre de Usuario:</b>
+                                    <input type="text" name="txtUse" class="form-control" required="true"/>
+                                </div>
+                                <div class="form-group">
+                                    <b>Contraseña:</b>
+                                    <input type="text" name="txtCla" class="form-control" required="true"/>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Guardar</button>
+                                <button  class="btn btn-default">Cancelar</button><br>
+                            </form>   
+                        </div>
+                        <div class="col-md-3">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -135,7 +116,7 @@
         tipous = "Profesor";
 
         if (nombres != null && apellidos != null && cedula != null && correo != null && username != null && contra != null && estado != null && tipous != null) {
-            ps = con.prepareStatement("insert into profesor(Nombres, Apellidos, Cedula, Correo, Username, Clave , tipous, Estado)values('" + nombres + "','" + apellidos + "','" + cedula + "','" + correo + "','" + username + "','" + contra + "','" + estado + "','" + tipous +"')");
+            ps = con.prepareStatement("insert into profesor(Nombres, Apellidos, Cedula, Correo, Username, Clave , tipous, Estado)values('" + nombres + "','" + apellidos + "','" + cedula + "','" + correo + "','" + username + "','" + contra + "','" + estado + "','" + tipous + "')");
             ps.executeUpdate();
             response.sendRedirect("../index.jsp");
         }

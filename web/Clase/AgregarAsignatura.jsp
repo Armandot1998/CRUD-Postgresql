@@ -1,3 +1,4 @@
+<%@page import="javax.swing.JOptionPane"%>
 <%@page import="java.sql.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -28,9 +29,9 @@
             Statement smt;
             ResultSet rs;
             smt = con.createStatement();
-            rs = smt.executeQuery("select * from profesor");
-            //Creamo la Tabla:     
-        %>  
+            rs = smt.executeQuery("select * from asignatura");
+            //Creamos la Tabla:     
+        %>    
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
@@ -115,12 +116,13 @@
                                     <label for="exampleInputEmail1">
                                         Nombre de la Asignatura:
                                     </label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1" />
+                                    <input type="text" name="txtAsi" class="form-control" id="exampleInputEmail1" />
                                 </div>                
                                 <button type="submit" class="btn btn-primary">
                                     Agregar
                                 </button>
                             </form>
+
                         </div>
                         <div class="col-md-4">
                         </div>
@@ -132,4 +134,14 @@
     </body>
 </html>
 </body>
-</html>
+<%  String asignatura;
+    asignatura = request.getParameter("txtAsi");
+
+    if (asignatura != null) {
+        ps = con.prepareStatement("insert into asignatura (asignatura) values('" + asignatura + "')");
+        response.sendRedirect("Inicio.jsp");
+
+    }
+
+
+%>

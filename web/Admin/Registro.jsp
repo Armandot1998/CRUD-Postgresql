@@ -6,9 +6,14 @@
         <title>Registro Académico</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <a href="../../../../../../../xampp/htdocs/RestApi/profesor.php"></a>
         <link rel="stylesheet" type="text/css" href="../styles/bootstrap4/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../styles/main_styles.css">
-
+         <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+         <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+          <link rel="stylesheet" type="text/css" href="../css/normalize.css">
+           <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+              <link rel="stylesheet" type="text/css" href="../css/bootstrap-themes.min.css.map">
     </head>
     <body>
         <%

@@ -1,13 +1,7 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package pkgMenu;
 
-/**
- *
- * @author andres2288
- */
+
 public class admin {
    
     private String usuario;

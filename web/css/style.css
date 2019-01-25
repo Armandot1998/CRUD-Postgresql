@@ -13,3 +13,37 @@
     width:99.9%;
     height:6%;
     margin: 1px;} 
+ 
+            ul, ol {
+                list-style:none;
+            }
+
+            nav > li {
+                float:left;
+            }
+
+            nav li a {
+                background-color:#FFF;
+                text-decoration:none;
+                display:block;
+            }
+
+            nav li a:hover {
+                background-color:#FFF;
+            }
+
+            nav li ul {
+                display:none;
+                position:absolute;
+                min-width:140px;
+            }
+
+            nav li:hover > ul {
+                display:block;
+            }
+
+            nav li ul li {
+                position:relative;
+            }
+
+

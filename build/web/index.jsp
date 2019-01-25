@@ -7,30 +7,15 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <link rel="shortcut icon" href="imagenes/Logo.png">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
               integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     </head>
-    <body>
-        <%
-            //CONECTANOD A LA BASE DE DATOS:
-            Connection con;
-            String url = "jdbc:postgresql://localhost:5432/Registro";
-            String Driver = "org.postgresql.Driver";
-            String user = "postgres";
-            String clave = "12345";
-            Class.forName(Driver);
-            con = DriverManager.getConnection(url, user, clave);
-            PreparedStatement ps;
-            //Emnpezamos Listando los Datos de la Tabla Usuario
-            Statement smt;
-            ResultSet rs;
-            smt = con.createStatement();
-            rs = smt.executeQuery("select * from profesor");
-            //Creamo la Tabla:     
-%>  
+    <body>       
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
@@ -55,7 +40,7 @@
                 </div>
             </div>
         </div><br>
-        <header align="right">         
+        <header align="right">  
         </header>
         <div class="container-fluid">
             <div class="row">
@@ -67,26 +52,31 @@
                                 </div>
                                 <div class="col-md-6"><br>
                                     <form role="form" action="validardatos.jsp" method="post" >
-                                        <center><h3>Bienvenido </h3></center>
-                                        <div class="form-group">
-                                            <label>
-                                                Usuario:
-                                            </label>
-                                            <input type="text" name="usuario" class="form-control" id="usuario" required="true" />
-                                        </div>
-                                        <div class="form-group">
-                                            <label>
-                                                Contraseña:
-                                            </label>
-                                            <input type="password" name="contrasena" class="form-control" id="contrasena" required="true" />
-                                        </div>
+                                        <center><h3>Bienvenido </h3></center>   
+                                        <hr align="left" noshade="noshade" size="3" width="100%" />
+                                        <div class="input-group margin-bottom-sm">
+                                            <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+                                            <input class="form-control" name="usuario" type="text"  placeholder="Usuario" required="true">
+                                        </div><br>
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+                                            <input class="form-control" name="contrasena" type="password" placeholder="Contraseña" required="true">
+                                        </div><br>
                                         <button type="submit" class="btn btn-primary">
                                             Entrar
                                         </button>
-                                        <a href="Empesar/Registro.jsp" class="btn btn-success">
-                                            <span class="glyphicon glyphicon-list"></span> Registrarse 
-                                        </a>
+                                        <div class="btn-group">
+                                            <a class="btn btn-default" data-toggle="dropdown" href="#">Opciones
+                                                <span class="fa fa-cog" title="Toggle dropdown menu"></span>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="Empesar/Registro.jsp"><i class="fa fa-pencil fa-fw"></i> Registrarse</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="Admin/Administrar.jsp"><i class="fa fa-unlock"></i> Administrar</a></li>
+                                            </ul>
+                                        </div>
                                     </form>
+                                    <hr align="left" noshade="noshade" size="3" width="100%" />
                                 </div>
                             </div>
                         </div>

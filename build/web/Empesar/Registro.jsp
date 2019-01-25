@@ -7,8 +7,10 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <link rel="shortcut icon" href="../imagenes/Logo.png">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
         <link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
               integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -48,6 +50,8 @@
                         <div class="col-md-4">
                         </div>
                         <div class="col-md-4">
+                            <br><img alt="Bootstrap Image Preview"  src="../imagenes/Geston.png" 
+                                     class="" height="80" width="170" />
                         </div>
                     </div>
                 </div>
@@ -57,46 +61,61 @@
         </header>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-4">
-                </div>
-                <div class="col-md-8">
+                <div class="col-md-12">
                     <div class="row">
-                        <div class="col-md-3">
+                        <div class="col-md-4">
+                            <div class="row">
+                                <div class="col-md-6">
+                                </div>
+                                <div class="col-md-6">
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-6">
-                            <form >
-                                <div class="form-group">   
-                                    <h3 class="text-right text-muted">
-                                        Resgistro de Datos
-                                    </h3><br>
-                                    <b>  Nombres Completos:</b>
-                                    <input type="text" name="txtNom" class="form-control" required="true" />
+                        <div class="col-md-8">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <form >
+                                                <div class="form-group">   
+                                                    <h3 class="text-right text-muted">Resgistro de Docentes</h3>
+                                                    <hr align="left" noshade="noshade" size="3" width="100%" /><br>
+                                                    <div class="input-group margin-bottom-sm">
+                                                        <span class="input-group-addon"><i class="fa fa-user-circle fa-fw"></i></span>
+                                                        <input class="form-control" name="txtNom" type="text"  placeholder="Ingrese sus nombres completos" required="true">
+                                                    </div><br>
+                                                    <div class="input-group margin-bottom-sm">
+                                                        <span class="input-group-addon"><i class="fa fa-user-circle fa-fw"></i></span>
+                                                        <input class="form-control" name="txtApe" type="text" name="txtApe" placeholder="Ingrese sus apellidos completos" required="true">
+                                                    </div><br>
+                                                    <div class="input-group margin-bottom-sm">
+                                                        <span class="input-group-addon"><i class="fa fa-id-card fa-fw" ></i></span>
+                                                        <input class="form-control" name="txtCed" type="text"  placeholder="Ingrese su cédula de identidad" required="true">
+                                                    </div><br>
+                                                    <div class="input-group margin-bottom-sm">
+                                                        <span class="input-group-addon"><i class="fa fa-envelope fa-fw"></i></span>
+                                                        <input class="form-control" name="txtCor" type="text"  placeholder="Ingrese su correo electrónico" required="true">
+                                                    </div><br>
+                                                    <div class="input-group margin-bottom-sm">
+                                                        <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+                                                        <input class="form-control" name="txtUse" type="text"  placeholder="Ingrese sus nombre de usuario" required="true">
+                                                    </div><br>
+                                                    <div class="input-group margin-bottom-sm">
+                                                        <span class="input-group-addon"><i class="fa fa-unlock-alt fa-fw"></i></span>
+                                                        <input class="form-control" name="txtCla" type="text"  placeholder="Ingrese su contraseña" required="true">
+                                                    </div><br>
+                                                    <button type="submit" class="btn btn-primary">Guardar</button>
+                                                    <a class="btn btn-default" href="../index.jsp">
+                                                        <i class="fa fa-sign-out fa-lg"></i> Salir</a>
+                                            </form>  
+                                        </div>
+                                        <div class="col-md-4">
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <b>Apellidos Completos:</b>
-                                    <input type="text" name="txtApe" class="form-control" required="true" />
+                                <div class="col-md-4">
                                 </div>
-                                <div class="form-group">
-                                    <b>Cedula de Identidad:</b>
-                                    <input type="text" name="txtCed" class="form-control" required="true" />
-                                </div>
-                                <div class="form-group">
-                                    <b>Correo Electrónico:</b>
-                                    <input type="text" name="txtCor" class="form-control" required="true" />
-                                </div>
-                                <div class="form-group">
-                                    <b>  Nombre de Usuario:</b>
-                                    <input type="text" name="txtUse" class="form-control" required="true"/>
-                                </div>
-                                <div class="form-group">
-                                    <b>Contraseña:</b>
-                                    <input type="text" name="txtCla" class="form-control" required="true"/>
-                                </div>
-                                <button type="submit" class="btn btn-primary">Guardar</button>
-                                <button  class="btn btn-default">Cancelar</button><br>
-                            </form>   
-                        </div>
-                        <div class="col-md-3">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -116,7 +135,7 @@
         tipous = "Profesor";
 
         if (nombres != null && apellidos != null && cedula != null && correo != null && username != null && contra != null && estado != null && tipous != null) {
-            ps = con.prepareStatement("insert into profesor(Nombres, Apellidos, Cedula, Correo, Username, Clave , tipous, Estado)values('" + nombres + "','" + apellidos + "','" + cedula + "','" + correo + "','" + username + "','" + contra + "','" + estado + "','" + tipous + "')");
+            ps = con.prepareStatement("insert into profesor(Nombres, Apellidos, Cedula, Correo, Username, Clave , tipous, Estado)values('" + nombres + "','" + apellidos + "','" + cedula + "','" + correo + "','" + username + "','" + contra + "','" + tipous + "','" + estado + "')");
             ps.executeUpdate();
             response.sendRedirect("../index.jsp");
         }

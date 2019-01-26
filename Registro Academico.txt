@@ -1,0 +1,64 @@
+CREATE TABLE Usuario (
+idUsuario  SERIAL primary key,
+	Nombres varchar(100) not null,
+	Apellidos varchar(100) not null,
+	Cedula varchar(10) not null,
+	Correo varchar(150) not null,
+	Username varchar(150) not null,
+	Clave varchar(100) not null);
+	
+CREATE TABLE Asignatura (
+idAsignatura SERIAL primary key,
+	Asignatura varchar(150) not null);	
+
+CREATE TABLE Alumno (
+idAlumno SERIAL primary key,
+	Nombres varchar(100) not null,
+	Apellidos varchar(100) not null,
+	Cedula varchar(10) not null); 
+	
+CREATE TABLE Curso (
+idCurso SERIAL primary key,
+	Curso varchar(100) not null);	
+	
+CREATE TABLE Clase (
+idClase SERIAL primary key,
+	idAlumno integer,
+	idCurso integer,
+	idUsuario integer,
+	idAsignatura integer);	
+
+ALTER TABLE Clase ADD CONSTRAINT fkidAlumno Foreign key (idAlumno) References Alumno (idAlumno);  
+ALTER TABLE Clase ADD CONSTRAINT fkidCurso Foreign key (idCurso) References Curso (idCurso); 
+ALTER TABLE Clase ADD CONSTRAINT fkidUsuario Foreign key (idUsuario) References Usuario (idUsuario);
+ALTER TABLE Clase ADD CONSTRAINT fkidAsignatura Foreign key (idAsignatura) References Asignatura (idAsignatura); 
+
+
+
+CREATE TABLE TipoNota (
+idTipoNota SERIAL primary key,
+	TipoNota varchar(100) not null);
+
+CREATE TABLE Libreta (
+idLibreta SERIAL primary key,
+        idAsignatura integer,
+        idClase integer,
+	Fecha Date not null,
+	Puntuacion integer,
+	idTipoNota integer,
+    idAlumno integer);	
+ALTER TABLE Libreta ADD CONSTRAINT fkidClase Foreign key (idClase) References Clase (idClase);	
+ALTER TABLE Libreta ADD CONSTRAINT fkidAsignatura Foreign key (idAsignatura) References Asignatura (idAsignatura);	
+ALTER TABLE Libreta ADD CONSTRAINT fkidTipoNota Foreign key (idTipoNota) References Tiponota (idTipoNota);
+ALTER TABLE Libreta ADD CONSTRAINT fkidAlumno Foreign key (idAlumno) References Alumno (idAlumno);
+
+CREATE TABLE Promedio (
+	idPromedio SERIAL primary key,
+        idAsignatura integer,
+	Promedio Decimal not null,
+    Resultado varchar(100) not null,
+    idAlumno integer);
+	
+ALTER TABLE promedio ADD CONSTRAINT fkidAlumno Foreign key (idAlumno) References Alumno (idAlumno);
+ALTER TABLE Promedio ADD CONSTRAINT fkidAsignatura Foreign key (idAsignatura) References Asignatura (idAsignatura);
+insert into profesor ( nombres, apellidos, cedula, correo, username, clave) values ('Armando Telmo', 'Cajilema Cuji', '1726850660', 'armandotcajilema@gmail.com', 'Arex', '12345');

@@ -21,13 +21,13 @@ public class admin {
     }
       
       public boolean verificau(String key){
-String sql="SELECT * From profesor where username='"+key.toString()+"'";
+String sql="SELECT * From usuario where username_us='"+key.toString()+"'";
 if (    getCnn().verificar(sql) == 1)
 return true;
 return false;
 }
 public boolean verificac(String key){
-String sql="SELECT * From profesor where clave='"+key.toString()+"'";
+String sql="SELECT * From usuario where clave_us='"+key.toString()+"'";
 if (    getCnn().verificar(sql) == 1)
 return true;
 return false;

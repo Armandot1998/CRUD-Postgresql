@@ -64,17 +64,12 @@
                                         </div><br>
                                         <button type="submit" class="btn btn-primary">
                                             Entrar
-                                        </button>
-                                        <div class="btn-group">
-                                            <a class="btn btn-default" data-toggle="dropdown" href="#">Opciones
-                                                <span class="fa fa-cog" title="Toggle dropdown menu"></span>
-                                            </a>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="Empesar/Registro.jsp"><i class="fa fa-pencil fa-fw"></i> Registrarse</a></li>
-                                                <li class="divider"></li>
-                                                <li><a href="Admin/Administrar.jsp"><i class="fa fa-unlock"></i> Administrar</a></li>
-                                            </ul>
-                                        </div>
+                                        </button><br>
+                                        <hr align="left" noshade="noshade" size="3" width="100%" />
+                                         <div class="list-group">
+                                        <a class="list-group-item" href="Empesar/Registro.jsp"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i>&nbsp; Registrarse</a>
+                                        <a class="list-group-item" href="Admin/Administrar.jsp"><i class="fa fa-unlock" aria-hidden="true"></i>&nbsp; Ardministrar</a>
+                                    </div>
                                     </form>
                                     <hr align="left" noshade="noshade" size="3" width="100%" />
                                 </div>

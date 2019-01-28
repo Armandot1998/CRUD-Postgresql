@@ -22,11 +22,7 @@
             p.setcontrasena(request.getParameter("contrasena"));
             String res = p.insertar3();
             if (res.equals("-1")) {
-                out.print("Los Datos son Correctos");
         %>
-
-        <%
-        } else if (res.equals("1")) {%>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
@@ -46,64 +42,118 @@
                         <div class="col-md-4">
                         </div>
                         <div class="col-md-4">
+                            <br><img alt="Bootstrap Image Preview"  src="../imagenes/Geston.png" 
+                                     class="" height="80" width="170" />
                         </div>
                     </div>
                 </div>
             </div>
         </div><br>
-        <header align="right"></header>
+        <header align="right"></header><br>
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="row">
-                                <div class="col-md-6">
-                                </div>
-                                <div class="col-md-6"><br>
-                                    <form role="form" action="validardatos.jsp" method="post" >
-                                        <center><h4>Bienvenido Administrador </h4></center>   
-                                        <hr align="left" noshade="noshade" size="3" width="100%" />
-                                        <div class="input-group margin-bottom-sm">
-                                            <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
-                                            <input class="form-control" name="usuario" type="text"  placeholder="Usuario" required="true">
-                                        </div><br>
-                                        <div class="input-group">
-                                            <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
-                                            <input class="form-control" name="contrasena" type="password" placeholder="Contraseña" required="true">
-                                        </div><br>
-                                        <button type="submit" class="btn btn-primary">
-                                            Entrar
-                                        </button>
-                                        <div class="btn-group">
-                                            <a class="btn btn-default" href="../index.jsp">
-                                                <i class="fa fa-sign-out fa-lg"></i>&nbsp;Salir</a>
-                                        </div>
-                                    </form>
-                                    <hr align="left" noshade="noshade" size="3" width="100%" />
-                                    <div class="alert alert-danger" role="alert">
-                                        <% out.print("El usuario o la clave son incorrectos");%>
-                                    </div>
-                                </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="list-group">
+                            <a class="list-group-item" > <h4> <i class="fa fa-list fa-fw" aria-hidden="true"></i>&nbsp; Datos Generales</h4></a>
+                            <a class="list-group-item" href="../Admin/Docente.jsp"><i class="fa fa-plus fa-fw" aria-hidden="true"></i>&nbsp;Docentes</a>
+                            <a class="list-group-item" href="../Admin/Alumno.jsp"><i class="fa fa-bars fa-fw" aria-hidden="true"></i>&nbsp;Alumnos</a>
+                            <a class="list-group-item" href="../Admin/Curso.jsp"><i class="fa fa-bars fa-fw" aria-hidden="true"></i>&nbsp;Cursos</a>
+                            <a class="list-group-item" href="Admin/Asignatura.jsp"><i class="fa fa-bars fa-fw" aria-hidden="true"></i>&nbsp;Asignaturas</a>
+                        </div>
+                        <div class="list-group">
+                            <a class="list-group-item" href="#"> <h3> <i class="fa fa-bell fa-fw" aria-hidden="true"></i>&nbsp; Ajustes</h3></a>
+                            <a class="list-group-item" href="../Recordatorio/Recordatorio.jsp"><i class="fa fa-address-book-o fa-fw" aria-hidden="true"></i>&nbsp; Administradores</a>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="row">
+                            <div class="col-md-12">
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <img alt="Bootstrap Image Preview" src="../imagenes/Geston.png" height="440" width="800"  /> 
-                        </div>                 
-                        <div class="col-md-4">      
-                        </div>               
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container-fluid">
+<%
+        } else if (res.equals("1")) {%>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-md-4">
+                        </div>
+                        <div class="col-md-4">
+                            <br><img alt="Bootstrap Image Preview"  src="../imagenes/Yavirac3.jpg" 
+                                     class="" height="80" width="120" />
+                        </div>
+                        <div class="col-md-4">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4">
                 </div>
             </div>
         </div>
-        <%}%>
-    </body>
+    </div>
+</div><br>
+<header align="right"></header>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-md-6">
+                        </div>
+                        <div class="col-md-6"><br>
+                            <form role="form" action="validardatos.jsp" method="post" >
+                                <center><h4>Bienvenido Administrador </h4></center>   
+                                <hr align="left" noshade="noshade" size="3" width="100%" />
+                                <div class="input-group margin-bottom-sm">
+                                    <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+                                    <input class="form-control" name="usuario" type="text"  placeholder="Usuario" required="true">
+                                </div><br>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+                                    <input class="form-control" name="contrasena" type="password" placeholder="Contraseña" required="true">
+                                </div><br>
+                                <button type="submit" class="btn btn-primary">
+                                    Entrar
+                                </button>
+                                <div class="btn-group">
+                                    <a class="btn btn-default" href="../index.jsp">
+                                        <i class="fa fa-sign-out fa-lg"></i>&nbsp;Salir</a>
+                                </div>
+                            </form>
+                            <hr align="left" noshade="noshade" size="3" width="100%" />
+                            <div class="alert alert-danger" role="alert">
+                                <% out.print("El usuario o la clave son incorrectos");%>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <img alt="Bootstrap Image Preview" src="../imagenes/Geston.png" height="440" width="800"  /> 
+                </div>                 
+                <div class="col-md-4">      
+                </div>               
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+        </div>
+    </div>
+</div>
+<%}%>
+</body>
 </html>
 </body>
 </html>

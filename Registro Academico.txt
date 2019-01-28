@@ -1,57 +1,49 @@
+CREATE TABLE admin(
+	username varchar(100),
+	clave varchar(100)
+);
+
+insert into admin values('admin','admin');
+
 CREATE TABLE Usuario (
-idUsuario  SERIAL primary key,
-	Nombres varchar(100) not null,
-	Apellidos varchar(100) not null,
-	Cedula varchar(10) not null,
-	Correo varchar(150) not null,
-	Username varchar(150) not null,
-	Clave varchar(100) not null);
-	
-CREATE TABLE Asignatura (
-idAsignatura SERIAL primary key,
-	Asignatura varchar(150) not null);	
+	primernombre_us varchar(100) not null,
+        segundonombre_us varchar(100) not null,
+        primerapellido_us varchar(100) not null,
+	segundoapellido_us varchar(100) not null,
+	cedula_us varchar(100) primary key,
+	correo_us varchar(150) not null,
+	username_us varchar(150) not null,
+	clave_us varchar(100) not null,
+        estado varchar(100) not null);
+
+CREATE TABLE Asignatura (   
+	asignatura varchar(150) primary key);	
 
 CREATE TABLE Alumno (
-idAlumno SERIAL primary key,
-	Nombres varchar(100) not null,
-	Apellidos varchar(100) not null,
-	Cedula varchar(10) not null); 
+        primernombre_al varchar(100),
+        segundonombre_al varchar(100) not null,
+        primerapellido_al varchar(100) not null,
+	    segundoapellido_al varchar(100) not null,
+	    cedula_al varchar(10) primary key);
 	
 CREATE TABLE Curso (
-idCurso SERIAL primary key,
-	Curso varchar(100) not null);	
+	curso varchar(100) primary key);	
 	
 CREATE TABLE Clase (
-idClase SERIAL primary key,
-	idAlumno integer,
-	idCurso integer,
-	idUsuario integer,
-	idAsignatura integer);	
+        codigo_cla varchar(100) primary key,
+	cedula_al varchar(100),
+	curso varchar(100),
+	cedula_us varchar(100),
+	asignatura varchar(150));	
+					   
+ALTER TABLE Clase ADD CONSTRAINT fkialumno Foreign key (cedula_al) References Alumno (cedula_al);  
+ALTER TABLE Clase ADD CONSTRAINT fkcurso Foreign key (curso) References Curso (curso); 
+ALTER TABLE Clase ADD CONSTRAINT fkusuario Foreign key (cedula_us) References Usuario (cedula_us);
+ALTER TABLE Clase ADD CONSTRAINT fkasignatura Foreign key (asignatura) References Asignatura (asignatura); 
 
-ALTER TABLE Clase ADD CONSTRAINT fkidAlumno Foreign key (idAlumno) References Alumno (idAlumno);  
-ALTER TABLE Clase ADD CONSTRAINT fkidCurso Foreign key (idCurso) References Curso (idCurso); 
-ALTER TABLE Clase ADD CONSTRAINT fkidUsuario Foreign key (idUsuario) References Usuario (idUsuario);
-ALTER TABLE Clase ADD CONSTRAINT fkidAsignatura Foreign key (idAsignatura) References Asignatura (idAsignatura); 
-
-
-
-CREATE TABLE TipoNota (
-idTipoNota SERIAL primary key,
-	TipoNota varchar(100) not null);
-
-CREATE TABLE Libreta (
-idLibreta SERIAL primary key,
-        idAsignatura integer,
-        idClase integer,
-	Fecha Date not null,
-	Puntuacion integer,
-	idTipoNota integer,
-    idAlumno integer);	
-ALTER TABLE Libreta ADD CONSTRAINT fkidClase Foreign key (idClase) References Clase (idClase);	
-ALTER TABLE Libreta ADD CONSTRAINT fkidAsignatura Foreign key (idAsignatura) References Asignatura (idAsignatura);	
-ALTER TABLE Libreta ADD CONSTRAINT fkidTipoNota Foreign key (idTipoNota) References Tiponota (idTipoNota);
-ALTER TABLE Libreta ADD CONSTRAINT fkidAlumno Foreign key (idAlumno) References Alumno (idAlumno);
-
+insert into usuario values ('Armando', 'Telmo', 'Cajilema', 'Cuji', '1726850660', 'armandotcajilema@gmail.com', 'Arex', '12345', 'Activo');
+insert into alumno values( 'David', 'Ernesto', 'Bahamonde', 'Torres', '1714900188');
+					  
 CREATE TABLE Promedio (
 	idPromedio SERIAL primary key,
         idAsignatura integer,

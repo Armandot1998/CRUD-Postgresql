@@ -14,7 +14,7 @@ public class clsConn implements Serializable{
     Statement st=null;
     
     String driver="org.postgresql.Driver";
-    String url="jdbc:postgresql://localhost:5432/Registro";
+    String url="jdbc:postgresql://localhost:5432/RegistroAcad";
     String userDB="postgres";
     String passDB="12345";
 

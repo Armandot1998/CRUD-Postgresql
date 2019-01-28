@@ -49,46 +49,25 @@
                 </div>
             </div>
         </div><br>
-        <header align="right"></header>
+        <header align="right"></header><br>
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="row">
-                                <div class="col-md-6"><br>
-                                    <div class="list-group">
-                                        <a class="list-group-item" href="#"> <h3> <i class="fa fa-list fa-fw" aria-hidden="true"></i>&nbsp; Clases</h3></a>
-                                        <a class="list-group-item" href="#"><i class="fa fa-plus fa-fw" aria-hidden="true"></i>&nbsp; Nueva Clase</a>
-                                        <a class="list-group-item" href="#"><i class="fa fa-bars fa-fw" aria-hidden="true"></i>&nbsp; Clases Existentes</a>
-                                    </div>
-                                    <div class="list-group">
-                                        <a class="list-group-item" href="#"> <h3> <i class="fa fa-bell fa-fw" aria-hidden="true"></i>&nbsp; Recordatorios</h3></a>
-                                        <a class="list-group-item" href="#"><i class="fa fa-plus fa-fw" aria-hidden="true"></i>&nbsp; Nuevo Recordatorio</a>
-                                        <a class="list-group-item" href="#"><i class="fa fa-address-book-o fa-fw" aria-hidden="true"></i>&nbsp; Recordatorios</a>
-                                    </div>
-
-                                </div>
-                                <div class="col-md-6">
-                                </div>
-                            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="list-group">
+                            <a class="list-group-item" > <h3> <i class="fa fa-list fa-fw" aria-hidden="true"></i>&nbsp; Clases</h3></a>
+                            <a class="list-group-item" href="Clase/NuevaClase.jsp"><i class="fa fa-plus fa-fw" aria-hidden="true"></i>&nbsp; Nueva Clase</a>
+                            <a class="list-group-item" href="#"><i class="fa fa-bars fa-fw" aria-hidden="true"></i>&nbsp; Clases Existentes</a>
                         </div>
-                        <div class="col-md-8" align="right">
-                            <div class="btn-group">
-                                <a class="btn btn-default" href="index.jsp">
-                                    <i class="fa fa-sign-out fa-lg"></i>&nbsp;Salir</a>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <div class="row">
-                                        <div class="col-md-8">
-                                        </div>
-                                        <div class="col-md-4">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                </div>
+                        <div class="list-group">
+                            <a class="list-group-item" href="#"> <h3> <i class="fa fa-bell fa-fw" aria-hidden="true"></i>&nbsp; Recordatorios</h3></a>
+                            <a class="list-group-item" href="#"><i class="fa fa-plus fa-fw" aria-hidden="true"></i>&nbsp; Nuevo Recordatorio</a>
+                            <a class="list-group-item" href="#"><i class="fa fa-address-book-o fa-fw" aria-hidden="true"></i>&nbsp; Recordatorios</a>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="row">
+                            <div class="col-md-12">
                             </div>
                         </div>
                     </div>

@@ -19,7 +19,7 @@
         <%
             //CONECTANOD A LA BASE DE DATOS:
             Connection con;
-            String url = "jdbc:postgresql://localhost:5432/Registro";
+            String url = "jdbc:postgresql://localhost:5432/RegistroAcad";
             String Driver = "org.postgresql.Driver";
             String user = "postgres";
             String clave = "12345";
@@ -27,7 +27,6 @@
             con = DriverManager.getConnection(url, user, clave);
             PreparedStatement ps;
             Statement smt;
-            ResultSet rs;
             smt = con.createStatement();
 
         %>    
@@ -76,17 +75,25 @@
                                 <div class="col-md-8">
                                     <div class="row">
                                         <div class="col-md-8">
-                                            <form >
+                                            <form>
                                                 <div class="form-group">   
                                                     <h3 class="text-right text-muted">Resgistro de Docentes</h3>
                                                     <hr align="left" noshade="noshade" size="3" width="100%" /><br>
                                                     <div class="input-group margin-bottom-sm">
                                                         <span class="input-group-addon"><i class="fa fa-user-circle fa-fw"></i></span>
-                                                        <input class="form-control" name="txtNom" type="text"  placeholder="Ingrese sus nombres completos" required="true">
+                                                        <input class="form-control" name="txtNom1" type="text"  placeholder="Ingrese su primer nombre" required="true">
                                                     </div><br>
                                                     <div class="input-group margin-bottom-sm">
                                                         <span class="input-group-addon"><i class="fa fa-user-circle fa-fw"></i></span>
-                                                        <input class="form-control" name="txtApe" type="text" name="txtApe" placeholder="Ingrese sus apellidos completos" required="true">
+                                                        <input class="form-control" name="txtNom2" type="text"  placeholder="Ingrese su segundo nombre" required="true">
+                                                    </div><br>
+                                                    <div class="input-group margin-bottom-sm">
+                                                        <span class="input-group-addon"><i class="fa fa-user-circle fa-fw"></i></span>
+                                                        <input class="form-control" name="txtApe1" type="text" name="txtApe1" placeholder="Ingrese su primer apellido" required="true">
+                                                    </div><br>
+                                                     <div class="input-group margin-bottom-sm">
+                                                        <span class="input-group-addon"><i class="fa fa-user-circle fa-fw"></i></span>
+                                                        <input class="form-control" name="txtApe2" type="text" name="txtApe2" placeholder="Ingrese su segundo apellido" required="true">
                                                     </div><br>
                                                     <div class="input-group margin-bottom-sm">
                                                         <span class="input-group-addon"><i class="fa fa-id-card fa-fw" ></i></span>
@@ -123,19 +130,20 @@
         </div>
     </body>
 
-    <%  String nombres, apellidos, cedula, correo, username, contra, estado, tipous;
+    <%  String nombre1, nombre2, apellido1, apellido2, cedula, correo, username, contra, estado;
 
-        nombres = request.getParameter("txtNom");
-        apellidos = request.getParameter("txtApe");
+        nombre1 = request.getParameter("txtNom1");
+        nombre2 = request.getParameter("txtNom2");
+        apellido1 = request.getParameter("txtApe1");
+        apellido2 = request.getParameter("txtApe2");
         cedula = request.getParameter("txtCed");
         correo = request.getParameter("txtCor");
         username = request.getParameter("txtUse");
         contra = request.getParameter("txtCla");
         estado = "Activo";
-        tipous = "Profesor";
 
-        if (nombres != null && apellidos != null && cedula != null && correo != null && username != null && contra != null && estado != null && tipous != null) {
-            ps = con.prepareStatement("insert into profesor(Nombres, Apellidos, Cedula, Correo, Username, Clave , tipous, Estado)values('" + nombres + "','" + apellidos + "','" + cedula + "','" + correo + "','" + username + "','" + contra + "','" + tipous + "','" + estado + "')");
+        if (nombre1 != null && nombre2 != null && apellido1 != null && apellido2 != null && cedula != null && correo != null && username != null && contra != null && estado != null) {
+            ps = con.prepareStatement("insert into usuario values('" + nombre1 + "','" + nombre2 + "','" + apellido1 + "', '" + apellido2 + "','" + cedula + "','" + correo + "','" + username + "','" + contra + "','" + estado + "');");
             ps.executeUpdate();
             response.sendRedirect("../index.jsp");
         }
